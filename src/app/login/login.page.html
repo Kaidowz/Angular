@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>Sign In</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-back-button defaultHref="rentierhome"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br>
+  <ion-card-header>
+    <img src="assets/logo.png" alt="rentier-logo" class="loginlogo">
+    <br>
+    <ion-card-subtitle></ion-card-subtitle>
+    <ion-text class="logintitle">Welcome Landlord</ion-text>
+  </ion-card-header>
+  <ion-card>
+    <form>
+      <ion-list>
+        <ion-item>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input type="email" [(ngModel)]="email" name="email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input type="password" [(ngModel)]="password" name="password"></ion-input>
+        </ion-item>
+        <br>
+        <ion-button expand="block" type="submit" color="dark" size="full" (click)="login()" class="loginbuttoncss">Login</ion-button>
+      </ion-list>
+      <div style="text-align: center;">
+        <p>Don't have an account? <a [routerLink]="['/register']">Register Here!</a></p>
+      </div>
+    </form>
+  </ion-card>
+</ion-content>

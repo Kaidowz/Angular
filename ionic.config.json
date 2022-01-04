@@ -1,0 +1,7 @@
+{
+  "name": "RenTierAngularV2",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

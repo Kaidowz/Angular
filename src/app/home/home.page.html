@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-title style="text-align: center;">
+      Landlord Profile Page
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+        <ion-avatar class="avatar">
+          <img src="{{user?.photoUrl}}" alt="rentier-logo">
+        </ion-avatar>
+      </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="stacked">Full Name</ion-label>
+        <ion-text class="homecss">{{user?.userName}}</ion-text>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Email Address</ion-label>
+        <ion-text class="homecss">{{user?.userEmail}}</ion-text>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Phone Number</ion-label>
+        <ion-text class="homecss">{{user?.userPhone}}</ion-text>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Account Created</ion-label>
+        <ion-text class="homecss">{{user?.createdAt | date}}</ion-text>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button color="dark" expand="block" (click)="logout()">Logout</ion-button>
+  <ion-button color="dark" expand="block" (click)="editProfile()">Edit Profile</ion-button>
+  <ion-button color="dark" expand="block" (click)="createPost()">Create/Edit Post</ion-button>
+  <ion-button color="dark" expand="block" (click)="viewPost()">View Post</ion-button>
+</ion-content>

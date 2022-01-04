@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>Create Post</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+      <ion-card-header class="avatarcss">
+        <ion-avatar class="avatar">
+          <img src="{{user?.ImageUrl}}" alt="rentier-logo">
+        </ion-avatar>
+      </ion-card-header>
+      <div class="inputcss">
+      <input type="file" (change)="uploadImage($event)" id="file-input">
+      </div>
+    <form>
+      <ion-list>
+        <br>
+        <ion-item>
+          <ion-label position="stacked"> Boarding House Name</ion-label>
+          <ion-input required type="text" [(ngModel)]="namebh" name="namebh"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Description</ion-label>
+          <ion-textarea placeholder="Enter some description" [(ngModel)]="desc" name="desc"></ion-textarea>
+        </ion-item>
+        <br>
+        <ion-button color="dark" type="submit" expand="block" (click)="createPost()">Post</ion-button>
+      </ion-list>
+    </form>
+  </ion-card>
+</ion-content>

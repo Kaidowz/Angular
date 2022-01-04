@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>Profile</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-back-button defaultHref="feed/page"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-card>
+    <ion-card-content>
+      <ion-header>
+        <ion-avatar class="avatar">
+          <img src="{{user?.photoUrl}}" alt="rentier-logo">
+        </ion-avatar>
+        <br>
+      </ion-header>
+      <ion-item>
+        <ion-label position="stacked">Full Name</ion-label>
+        <ion-text>{{user?.userName}}</ion-text>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Email Address</ion-label>
+        <ion-text>{{user?.userEmail}}</ion-text>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Phone Number</ion-label>
+        <ion-text>{{user?.userPhone}}</ion-text>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Account Created</ion-label>
+        <ion-text>{{user?.createdAt | date}}</ion-text>
+      </ion-item>
+      <br>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
